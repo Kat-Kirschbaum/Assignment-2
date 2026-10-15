@@ -78,7 +78,7 @@ def main():
         elif choice == "5":
             print(f"${cost_per_class(annual_cost, credits):.2f}")
         elif choice == "6":
-            days_skipped = int(input("How many days have you skipped?"))
+            days_skipped = int(input("How many days have you skipped? "))
             print(f"${skip_cost(annual_cost, days_skipped):.2f}")
         else:
             print("Input not recognized.")
