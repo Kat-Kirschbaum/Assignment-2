@@ -41,7 +41,7 @@ def cost_per_class(annual_cost, credits):
 
 
 def skip_cost(annual_cost, days_skipped):
-    """Give back what missing _ amount of days costs in a semester"""
+    """Give back what missing _ amount of days costs"""
     return cost_per_day(annual_cost) * days_skipped
 
 
@@ -59,7 +59,7 @@ def main():
         print("3 - Cost per day")
         print("4 - Cost per semester credit")
         print("5 - Cost per class")
-        print("6 - How much would it cost if skipped a few days for a semester?")
+        print("6 - How much would it cost if skipped class for a few days?")
         print("Q - Quit")
         choice = str(input("Choose an option: "))
         
@@ -79,7 +79,7 @@ def main():
             print(f"${cost_per_class(annual_cost, credits):.2f}")
         elif choice == "6":
             days_skipped = int(input("How many days have you skipped?"))
-            print(f"${skip_cost(annual_cost, days_skipped)}")
+            print(f"${skip_cost(annual_cost, days_skipped):.2f}")
         else:
             print("Input not recognized.")
 # ---- LAUNCH: do not change ----
